@@ -1,4 +1,4 @@
 TodoList::Application.routes.draw do
   devise_for :users
-  root to: 'projects#index'
+  root to: 'home#index'
 end

@@ -1,3 +1,38 @@
-// Place all the styles related to the projects controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+ul.my_projects {
+  background: $blue-light;
+  border-radius: 5px;
+  float: left;
+  height: auto;
+  margin-right: 30px;
+  width: 200px;
+
+  li {
+
+    a {
+      background: $blue-light;
+      color: $white;
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      width: 180px;;
+    }
+
+    a:hover {
+      background: $blue-dark;
+    }
+  }
+
+  li:first-child {
+    a {
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+  }
+
+  li:last-child {
+    a {
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+  }
+}

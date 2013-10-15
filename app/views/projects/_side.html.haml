@@ -1,0 +1,4 @@
+%ul.my_projects
+  %li= link_to t('links.new_project'), new_project_path
+  - projects.each do |project|
+    %li= link_to project.name, project_path(project)

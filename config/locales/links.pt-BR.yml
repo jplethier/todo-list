@@ -1,0 +1,8 @@
+'pt-BR':
+  links:
+    home: 'Home'
+    login: 'Entrar'
+    logout: 'Sair'
+    my_projects: 'Meus Projetos'
+    new_project: 'Novo Projeto'
+    signup: 'Cadastrar-se'

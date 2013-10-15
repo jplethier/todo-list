@@ -35,17 +35,19 @@
     .nav-wrapper
       .menu
         %ul
-          %li= link_to 'home', root_path
+          %li= link_to t('links.home'), root_path
+          - if user_signed_in?
+            %li= link_to t('links.my_projects'), projects_path
 
       .extra
         - if user_signed_in?
           %span.username= current_user.email
           |
-          = link_to('Logout', destroy_user_session_path, method: :delete)
+          = link_to t('links.logout'), destroy_user_session_path, method: :delete
         - else
-          = link_to 'Login', new_user_session_path
+          = link_to t('links.login'), new_user_session_path
           |
-          = link_to 'Signup', new_user_registration_path
+          = link_to t('links.signup'), new_user_registration_path
 
   %article
     .content= yield

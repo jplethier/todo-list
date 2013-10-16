@@ -6,6 +6,9 @@ class Ability
 
     unless user.guest?
       can :manage, Project, user_id: user.id
+      can :manage, Task do |task|
+        task.project.user == user
+      end
     end
   end
 end

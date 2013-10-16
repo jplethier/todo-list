@@ -6,5 +6,8 @@ TodoList::Application.routes.draw do
     member do
       get :add_task
     end
+
+    resources :tasks, only: [:create, :update]
   end
+
 end

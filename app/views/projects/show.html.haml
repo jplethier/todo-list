@@ -4,7 +4,7 @@
 
 .project
   = link_to t('links.add_task'), add_task_project_path(@project), remote: true
-  .clear
+  .task-list
   - if @project.tasks.blank?
     = t('strings.project_with_no_tasks')
   - else

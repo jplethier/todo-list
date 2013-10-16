@@ -1,2 +1,11 @@
-= form_for task do |f|
-  %p= task.description
+- if task.finished_at
+  %p.done= task.description
+- else
+  - form_id = "task_form_#{task.object_id}"
+  = form_for [task.project, task], remote: true, html: { id: form_id } do |f|
+    = f.hidden_field :project_id, value: task.project.id
+    = f.check_box :finished_at, onchange: "$('##{form_id}').trigger('submit')"
+    - if task.new_record?
+      = f.text_field :description, onblur: "$('##{form_id}').trigger('submit')"
+    - else
+      %span= task.description

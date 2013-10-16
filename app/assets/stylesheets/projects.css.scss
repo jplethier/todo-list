@@ -43,4 +43,15 @@ ul.my_projects {
 .project {
   float: right;
   width: 790px;
+
+  .task-list {
+    clear: both;
+    margin-top: 10px;
+  }
+
+  p.done {
+    color: $gray-light;
+    margin: 2px 0;
+    text-decoration: line-through;
+  }
 }

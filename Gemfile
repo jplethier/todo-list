@@ -13,9 +13,6 @@ gem 'activerecord-postgresql-adapter'
 gem 'sass-rails'
 gem 'bourbon'
 
-# Page-specific javascript
-gem 'paloma'
-
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 

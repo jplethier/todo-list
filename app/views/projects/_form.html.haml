@@ -1,0 +1,7 @@
+= form_for @project do |f|
+  .field
+    = f.label :name
+    = f.text_field :name
+  .submit
+    = f.submit t('strings.confirm')
+    = link_to t('links.back'), projects_path

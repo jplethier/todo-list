@@ -1,5 +1,7 @@
 'pt-BR':
   links:
+    add_task: 'Adicionar tarefa'
+    back: 'Voltar'
     home: 'Home'
     login: 'Entrar'
     logout: 'Sair'

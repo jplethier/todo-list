@@ -7,6 +7,7 @@ ul.my_projects {
   width: 200px;
 
   li {
+    border-bottom: 1px solid $blue-dark;
 
     a {
       background: $blue-light;
@@ -30,9 +31,16 @@ ul.my_projects {
   }
 
   li:last-child {
+    border-bottom: none;
+
     a {
       border-bottom-left-radius: 5px;
       border-bottom-right-radius: 5px;
     }
   }
+}
+
+.project {
+  float: right;
+  width: 790px;
 }

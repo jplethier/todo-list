@@ -2,5 +2,9 @@ TodoList::Application.routes.draw do
   devise_for :users
   root to: 'home#index'
 
-  resources :projects
+  resources :projects do
+    member do
+      get :add_task
+    end
+  end
 end
